@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>hola mundo en Angular</title>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="index.js"></script>
+  </head>
+
+  <body ng-app="app" ng-controller="PruebaController">
+    <div>
+      <br />
+      Selecciono mis modulos:<br />
+      <select ng-model="nomModulo">
+        <option value="Desarrollo Aplicaciones Servidor" > Desarrollo Aplicaciones Servidor </option>
+        <option value="Desarrollo Aplicaciones Cliente"> Desarrollo Aplicaciones Cliente </option>
+        <option value="Diseño Interfaces Web"> Diseño Interfaces Web </option>
+      </select>
+      <input type="button" value="Introduce modulo" ng-click="agregarElemento()"/>
+      <br />
+      
+      <div id="izda">
+        <h1>Tabla con los modulos seleccionados</h1>
+        <table border="1" ng-show='ver === "si"'>
+          <tr>
+            <th>Nombre</th>
+            <th>Curso</th>
+          </tr>
+          <tr ng-repeat="item in ListaSeleccionados">
+            <td>{{item.nombre}}</td>
+            <td>{{item.curso}}</td>
+          </tr>
+        </table>
+      </div>
+      <div id="dcha">
+        <h1>Lista con los modulos seleccionados</h1>
+        <ul>
+          <li ng-repeat="item in ListaSeleccionados">
+            Nombre: {{item.nombre}}, Curso: {{item.curso}}
+          </li>
+        </ul>
+      </div>
+      <input type="button" value="LIMPIAR" ng-click="eliminarElemento()" />
+    </div>
+  </body>
+</html>

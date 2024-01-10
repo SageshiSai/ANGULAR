@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body ng-app="MyApp" ng-controller="miControlador">
+    <div style="background: rgb(0, 115, 117);" >
+        <center><h1>Consultas AJAX con Angular</h1></center>
+        <br>
+        <table>
+            <tr  id="listaalumnos"   ng-repeat="item in lista"   ng-show='ver === "si"'>
+                <td ng-style="estiloTabla">{{item.id}}</td>
+                <td ng-style="estiloTabla">{{item.nombre}}</td>
+                <td ng-style="estiloTabla">{{item.edad}}</td>
+                <td ng-style="estiloTabla">{{item.curso}}</td>    
+                <td ng-style="estiloTabla">{{item.modulo}}</td> 
+            </tr>
+        </table>
+        <button ng-click="SacarDatos()">cargar</button>
+    </div>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="AjaxAngular.js"></script>
+</body>
+</html>
