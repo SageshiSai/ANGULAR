@@ -1,9 +1,9 @@
 var app = angular.module('app', []);
 
-app.controller('PruebaController', function ($scope) {
+app.controller('PruebaController', ['$scope', '$http', function ($scope, $http) {
     $scope.items = [];
     $http.get('json/animales.json').then(function (response) { 
-        $scope.lista = response.data;
-        console.log($scope.lista);
+        $scope.items = response.data;
+        console.log($scope.items);
     });
-})
+}]);
