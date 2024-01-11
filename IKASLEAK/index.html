@@ -29,15 +29,15 @@
                     <div>5</div>
                 </div>
                 <button class="tipoSelect" id="verResultados"><a href="#test">VER RESULTADOS</a></button>
-                <button class="tipoSelect" id="verElegirNivel"><a href="#test">REALIZAR TEST</a></button>
+                <button class="tipoSelect" id="verElegirNivel"><a href="#test" ng-click="mostrarOpciones()">REALIZAR TEST</a></button>
                 <hr>
             </header>
             <div id="zonatest">
                 <div  id="niveles">
                
-                    <button class="tipoSelect" id="facil"><a href="#test">PRINCIPIANTE</a></button>
-                    <button class="tipoSelect" id="medio"><a href="#test">NIVEL MEDIO</a></button>
-                    <button class="tipoSelect" id="dificil"><a href="#test">NIVEL AVANZADO</a></button>
+                    <button class="tipoSelect" id="facil" ng-show="ver === si"><a href="#test">PRINCIPIANTE</a></button>
+                    <button class="tipoSelect" id="medio" ng-show="ver === si"><a href="#test">NIVEL MEDIO</a></button>
+                    <button class="tipoSelect" id="dificil" ng-show="ver === si"><a href="#test">NIVEL AVANZADO</a></button>
                 </div>       
                 <div id="content">   
                 </div>
