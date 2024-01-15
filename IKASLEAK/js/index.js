@@ -7,8 +7,13 @@ app.controller('PruebaController', ['$scope', '$http', function ($scope, $http) 
         console.log($scope.items);
     });
 
+    
+
     $scope.mostrarOpciones = function() {
         $scope.ver='si';
+        $scope.displayChange= {
+            display:"flex"
+        }
     }
 
 }]);
